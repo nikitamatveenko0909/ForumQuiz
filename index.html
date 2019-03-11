@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <icon src="bilder/icon1.png" platform="android" width="180" height="180" />
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-right panel-reveal" style="background: #e6dada; border:1px black solid;">
+        <div class="content-block">
+            <h1 id="panel-header">Forum Quiz</h1>
+            <a href="index.html">Home</a><br>
+            <a href="Contact.html">Kontakta oss</a><br>
+            <a href="about.html">Om oss</a>
+        </div>
+        <p id="copyright1"> <strong>Copyright 2019 &copy; Forum Quiz </strong></p>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">Flashback eller familjliv</div>
+                    <div class="right">
+
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block">
+                            <br>
+
+                            <img data-src="bilder/logo.png" id="logo" class="lazy lazy-fade-in">
+                            <p> Forum Quiz är ett quiz spel där du får välja mellan två alternativ där du får en mening sen ska du gissa om den är flashback eller familjliv</p>
+                            <img data-src="bilder/logo1.png" id="logo1" class="lazy lazy-fade-in">
+                            <div class="block">
+                                <br>
+                                <br>
+                                <!--button-->
+                                <div class="row container">
+                                    <a href="game.html" class="link external center1 col button button-fill">Starta</a>
+                                </div>
+                            </div>
+                            <!--button-->
+                            <!-- Link to another page -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Toolbar-->
+            <div class="toolbar">
+                <div class="toolbar-inner">
+
+                    <!-- Toolbar links -->
+                    <a href="#" class="link"></a>
+                    <p id="copyright"> Copyright 2019 &copy; Ahmad Saidan &amp; Nikita Matveenko</p>
+                    <a href="#" class="link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
